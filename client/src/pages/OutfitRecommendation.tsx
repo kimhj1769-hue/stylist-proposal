@@ -1,4 +1,4 @@
-const OutfitRecommendation: React.FC = () => {
+const OutfitRecommendation = () => {
   return (
     <div className="page-container">
       <h1>오늘의 코디 추천</h1>

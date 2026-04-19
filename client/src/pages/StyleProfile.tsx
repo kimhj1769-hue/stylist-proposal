@@ -1,4 +1,4 @@
-const StyleProfile: React.FC = () => {
+const StyleProfile = () => {
   return (
     <div className="page-container">
       <h1>스타일 프로필</h1>

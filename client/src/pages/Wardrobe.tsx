@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import axios from 'axios';
 
 interface ClothingItem {
@@ -10,7 +10,7 @@ interface ClothingItem {
   imageUrl: string;
 }
 
-const Wardrobe: React.FC = () => {
+const Wardrobe = () => {
   const [items, setItems] = useState<ClothingItem[]>([]);
   const [isAdding, setIsAdding] = useState(false);
   const [formData, setFormData] = useState({
@@ -35,7 +35,7 @@ const Wardrobe: React.FC = () => {
     fetchItems();
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/clothing', formData);
