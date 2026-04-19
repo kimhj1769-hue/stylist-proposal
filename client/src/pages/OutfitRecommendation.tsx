@@ -1,5 +1,3 @@
-import React from 'react';
-
 const OutfitRecommendation: React.FC = () => {
   return (
     <div className="page-container">
